@@ -1,0 +1,13 @@
+﻿@model Blog.Models.Post
+
+@Html.LabelFor(post => post.Titulo)
+@Html.TextBoxFor(post => post.Titulo, new { @class = "form-control"} )
+@Html.ValidationMessageFor(post => post.Titulo)
+
+@Html.LabelFor(post => post.Resumo)
+@Html.TextAreaFor(post => post.Resumo, new { @class = "form-control", rows = 6 })
+@Html.ValidationMessageFor(post => post.Resumo)
+
+@Html.LabelFor(post => post.Categoria)
+@Html.TextBoxFor(post => post.Categoria, new { @class = "form-control" })
+@Html.ValidationMessageFor(post => post.Categoria)

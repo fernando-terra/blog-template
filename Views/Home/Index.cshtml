@@ -1,0 +1,15 @@
+﻿@model IList<Blog.Models.Post>
+@if (ViewBag.Vazio == false)
+{
+    foreach (var post in Model)
+    {
+    <article>
+        <h1>@post.Titulo</h1>
+        <p>@post.Resumo</p>
+    </article>
+    }        
+}
+else
+{
+    @Html.Raw("Não existem posts para serem exibidos! :(")
+}

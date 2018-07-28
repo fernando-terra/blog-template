@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Resenha Cultural</title>
+    <link rel="stylesheet" href="~/Content/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="~/Content/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="~/Content/estilo.css" />
+</head>
+<body>
+    <div class="container clearfix">
+        <!-- CABEÇALHO -->
+        @Html.Partial("_Header")
+
+        <!-- PRINCIPAL -->
+        <main>
+            @RenderBody()
+        </main>
+
+        <!-- MENU LATERAL -->
+        @Html.Partial("_Aside")
+    </div>
+
+    <!-- RODAPÉ -->
+    @Html.Partial("_Footer")
+    
+    <!-- SCRIPTS -->
+    @RenderSection("Scripts", false)
+</body>
+</html>

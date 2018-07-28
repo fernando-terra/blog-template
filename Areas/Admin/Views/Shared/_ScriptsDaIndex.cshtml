@@ -1,0 +1,14 @@
+﻿<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script>
+        $(".postSubmit").click(
+            function (event) {
+                event.preventDefault();
+                self = $(this);
+                url = "/Admin/Post/Remove/" + self.attr("id");
+                $.get(url,
+                        function (data) {
+                            self.closest(".post").remove();
+                            alert("Removido com sucesso");
+                        });
+            });
+</script>

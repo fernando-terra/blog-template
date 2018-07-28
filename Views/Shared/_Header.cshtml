@@ -1,0 +1,17 @@
+﻿<header>
+    <div class="jumbotron">
+        <div class="text-right">
+            @if (ViewBag.Autenticado)
+            {                
+                @Html.ActionLink("Configurações", "Index", "Post", new { area = "Admin" }, new { @class = "btn btn-primary" })
+                @Html.ActionLink("Sair", "Logout", "Usuario", new { area = "" }, new { @class = "btn btn-danger" })                
+            }
+            else
+            {
+                @Html.ActionLink("Entrar", "Login", "Usuario", new { area = "" }, new { @class = "btn btn-primary" })
+            }
+        </div>
+        <h1>Resenha Cultural</h1>
+        <p>Críticas bem humoradas sobre filmes, músicas, livros e jogos. Tudo que agita o cenário cultural</p>
+    </div>
+</header>
